@@ -36,7 +36,7 @@ module Heaven
       private
 
       def deploy_recipe_clone_url
-        deploy_recipe_url = custom_payload.try(:[], 'deploy_recipe_clone_url')
+        deploy_recipe_url = custom_payload_config.try(:[], 'deploy_recipe_clone_url')
         if !deploy_recipe_url
           fail 'No deploy recipe'
         end
